@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.zup.dto.PointsInterestDTO;
-import br.com.zup.services.PoiService;
+import br.com.zup.services.PointsInterestService;
 
 @RestController
 @RequestMapping(value = "/points-interest")
@@ -23,26 +23,41 @@ public class PoiController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(PoiController.class);
 
 	@Autowired
-	private PoiService poiService;
+	private PointsInterestService poiService;
 
+	/**
+	 * Método responsável por pesquisar todos os pontos de interesse, cadastrados na base de dados
+	 * @return
+	 */
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	public List<PointsInterestDTO> buscarCliente(){
+	public List<PointsInterestDTO> findAll(){
 		LOGGER.info("Pesquisando todos os pontos de interesse.");
-		return poiService.buscarTodosPontosDeRefrencia();
+		return poiService.findAll();
 	}
 
-	//	@RequestMapping(value="/insert", method = RequestMethod.POST)
+	/**
+	 * Método reponsável por efetuar o cadastro de um novo ponto de endereço
+	 * @param poi
+	 * @throws Exception
+	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public void salvarPontosInteresse(@Valid @RequestBody PointsInterestDTO poi) {
+	public void saveInterestPoints(@Valid @RequestBody PointsInterestDTO poi) throws Exception {
 		LOGGER.info("Salvando pontos de interesse na base de dados.");
-		poiService.salvarPontoInteresse(poi);
+		poiService.saveInterestPoints(poi);
 	}
 
-	//	@RequestMapping(value="/points-interest-proximity/coordinateReferenceX/{coordinateReferenceX}/coordinateReferenceY/{coordinateReferenceY}/distance{distance}",params=""  method = RequestMethod.GET)
+	/**
+	 * Método responsável por buscar todos os pontos de interesse que se encontram a uma distância x
+	 * de uma coordenada.
+	 * @param coordinateReferenceX
+	 * @param coordinateReferenceY
+	 * @param distance
+	 * @return
+	 */
 	@RequestMapping(value="/points-interest-proximity" ,params={"coordinateReferenceX", "coordinateReferenceY", "distance"}, method = RequestMethod.GET)
 	private List<String> findPointsInterestFoProximity(@Valid Integer coordinateReferenceX, Integer coordinateReferenceY, Integer distance) {
-		LOGGER.info("Buscan pontos de interesse por proximidade.");
+		LOGGER.info("Buscando pontos de interesse por proximidade.");
 		return poiService.findPointsInterestFoProximity(coordinateReferenceX, coordinateReferenceY, distance);
 	}
 

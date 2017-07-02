@@ -1,25 +1,28 @@
-package br.com.zup.services;
+package br.com.zup.repository;
 
 import java.util.List;
 
 import br.com.zup.dto.PointsInterestDTO;
 
-public interface PoiService {
+public interface PointsInterestRepository {
 
 	/**
-	 * Busca todos os pontos de referência
+	 * Pesquisa lista de produtos de um cliente
+	 *
+	 * @param filtro
 	 * @return
 	 */
-	List<PointsInterestDTO> buscarTodosPontosDeRefrencia();
+	List<PointsInterestDTO> findAllPointsInterest();
 
 	/**
-	 * Salva um ponto de interesse
+	 * salva um ponto de interesse
 	 * @param poi
 	 */
-	void salvarPontoInteresse(PointsInterestDTO poi);
+	void savePointInterest(PointsInterestDTO pointInterest);
+
 
 	/**
-	 * Pesquisa todos os pontos de interesse em uma distância
+	 * Bsuca pontos de interesse por proximidade
 	 * @param coordinateReferenceX
 	 * @param coordinateReferenceY
 	 * @param distance

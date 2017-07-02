@@ -1,7 +1,3 @@
---insert into tb_points_interest (name, coordinated_x, coordinated_y) values ('Ponto 1', 1, 2);
---insert into tb_points_interest (name, coordinated_x, coordinated_y) values ('Ponto 2', 1, 2);
---insert into tb_points_interest (name, coordinated_x, coordinated_y) values ('Ponto 3', 1, 2);
-
 insert into tb_points_interest (name, coordinated_x, coordinated_y) values ('Lanchonete', 27, 12);
 insert into tb_points_interest (name, coordinated_x, coordinated_y) values ('Posto', 31, 18);
 insert into tb_points_interest (name, coordinated_x, coordinated_y) values ('Joalheria', 15, 12);

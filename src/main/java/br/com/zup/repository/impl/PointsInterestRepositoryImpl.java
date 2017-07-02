@@ -9,15 +9,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.zup.dto.PointsInterestDTO;
-import br.com.zup.repository.PoiRepository;
+import br.com.zup.repository.PointsInterestRepository;
 
 @Service
 @Transactional
-public class PointsInterestRepositoryImpl implements PoiRepository {
+public class PointsInterestRepositoryImpl implements PointsInterestRepository {
 
 	@Autowired
 	private NamedParameterJdbcTemplate namedJdbcTemplate;
 
+	/**
+	 * Busca todos os pontos de interesse cadastrados
+	 */
 	@Override
 	public List<PointsInterestDTO> findAllPointsInterest() {
 
@@ -35,16 +38,26 @@ public class PointsInterestRepositoryImpl implements PoiRepository {
 		return pontosInteresse;
 	}
 
+	/**
+	 * Salva um ponto de interesse
+	 * @param pointInterest
+	 */
 	@Override
-	public void savePointInterest(PointsInterestDTO poi) {
+	public void savePointInterest(PointsInterestDTO pointInterest) {
 		String insertQuery = "INSERT INTO TB_POINTS_INTEREST (NAME, COORDINATED_X, COORDINATED_Y) values (:name, :coordinated_x, :coordinated_Y)";
 		HashMap<String, Object> parametros = new HashMap<>();
-		parametros.put("name", poi.getName());
-		parametros.put("coordinated_x", poi.getCoordinatedX());
-		parametros.put("coordinated_Y", poi.getCoordinatedY());
+		parametros.put("name", pointInterest.getName());
+		parametros.put("coordinated_x", pointInterest.getCoordinatedX());
+		parametros.put("coordinated_Y", pointInterest.getCoordinatedY());
 		namedJdbcTemplate.update(insertQuery, parametros);
 	}
 
+	/**
+	 * Busca pontos de interesse por proximidade
+	 * @param coordinateReferenceX
+	 * @param coordinateReferenceY
+	 * @param distance
+	 */
 	@Override
 	public List<String> findPointsInterestFoProximity(Integer coordinateReferenceX,
 			Integer coordinateReferenceY, Integer distance) {
