@@ -11,7 +11,7 @@ Configurando ambiente:
     </ol>
   </li>
   <li>Com o projeto importado, abre o arquivo Application.java que se encontra eh (src/main/java) no pacote (br.com.zup)</li>
-  <li>Execute o projeto (Run -> Run As -> Java Application. <br> O projeto será iniciado.</li>
+  <li>Execute o projeto (Run -> Run As -> Java Application). <br> O projeto será iniciado.</li>
 </ol>
 
 Chamando os serviços:
