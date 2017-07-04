@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @EnableAutoConfiguration
 @SpringBootApplication
-@ComponentScan(basePackages = {"br.com.zup","br.com.zup.controllers", "br.com.zup.services"})
+@ComponentScan(basePackages = {"br.com.zup"})
 public class Application {
 
 	public static void main(String[] args) {

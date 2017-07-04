@@ -48,6 +48,4 @@ public class PointsInterestServiceImpl implements PointsInterestService {
 		return poiRepository.findPointsInterestFoProximity(coordinateReferenceX, coordinateReferenceY, distance);
 	}
 
-
-
 }
