@@ -19,7 +19,7 @@ import br.com.zup.dto.PointsInterestDTO;
 import br.com.zup.services.PointsInterestService;
 
 @RestController
-@RequestMapping(value = "/points-interest")
+@RequestMapping(value = "/api/points-interest")
 public class PoiController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(PoiController.class);
