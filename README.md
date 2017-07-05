@@ -76,10 +76,10 @@ $ curl http://localhost:8080/api/points-interest
 ]
 ```
 
-GET api/points-interest/points-interest-proximity - Busca todos os pontos de interesse por proximidade
+GET api/points-interest/proximity - Busca todos os pontos de interesse por proximidade
 
 ```sh
-$ curl http://localhost:8080/api/points-interest/points-interest-proximity?coordinateReferenceX=20&coordinateReferenceY=10&distance=10
+$ curl http://localhost:8080/api/points-interest/proximity?coordinateReferenceX=20&coordinateReferenceY=10&distance=10
 [
   "Lanchonete",
   "Joalheria",
