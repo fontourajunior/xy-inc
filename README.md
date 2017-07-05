@@ -99,7 +99,7 @@ $ curl -H "Content-Type: application/json" -X POST -d '{"coordinatedX": 0, "coor
 
 Foi disponibilizada uma documentação dos serviços. Esta documentação é acessível na URL http://localhost:8080/swagger-ui.html
 
-![Swagger](https://lh3.googleusercontent.com/4P2bEbn0VFnyv991jKDL-joCK0Fq09eszH2SUzwhacibIYI-3RduFGLENMtjnxrkg0gv55wuw2RNgFKqVpm0asy7TCTuQoFf6CebABIPyiS8dKVgoKbjioHFPoUPAbnbNU50Ry0PJjI_eBy7OPOR_Z0Kd3NTam1VdNeHiS5kpLLbvVToJhxrGQZEtHmDo5lktODzpO3jijLFkp38XYKLILMj0HXHjF6d4UpYoeIj8s8SeMaqZESCTZkYEsgXEdkvtMmDccS3_ArXF6D2EMV71aLq4yt9-1-0PBpTDxRVrlY5KCKggtiIYIrmNxYt1dO6xvdm1gWwB3Dn38PxywQhqeH9JpF6vVdLi7nDhT9wQ_sUQU8GPT7CnGvDHKXezWeNTY37zZWvXnpd9pu-4OxuAtCPJsgLsShXQfuu96zcw3v035GzrPu5atznL2WzDI_QKDTZs606MiFIYNFWOexS1bFvVoKZLXoqlka_7ijAJ2BuGdyaev-rmp0PJ6zx35ZzX_FmWywIW-m4aXh6XJuR__hQ7P3rfDjvG-UOuVmRb9ySKjy1orMzVBHciKwULC1q-mvw7BHSx-2VFDtJypVBuE9gYfoLrsMcCeZC2BKOOYyPGPgKIdv1=w1094-h608-no)
+![Swagger](https://github.com/fontourajunior/xy-inc/readme_img.doc.img)
 
 É possível acessar o banco embarcado pela a URL: http://localhost:8080/h2-console/
 

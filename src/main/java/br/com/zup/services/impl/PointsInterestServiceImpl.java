@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.zup.dto.PointsInterestDTO;
+import br.com.zup.exceptions.BusinessException;
 import br.com.zup.repository.PointsInterestRepository;
 import br.com.zup.services.PointsInterestService;
 
@@ -28,12 +29,13 @@ public class PointsInterestServiceImpl implements PointsInterestService {
 	/**
 	 * Salva um determinado ponto de interesse
 	 * @throws Exception
+	 * @throws BusinessException
 	 */
 	@Override
-	public void saveInterestPoints(PointsInterestDTO pointInterest) throws Exception {
+	public void saveInterestPoints(PointsInterestDTO pointInterest) throws BusinessException {
 
 		if(pointInterest.getCoordinatedX() < 0 || pointInterest.getCoordinatedY() < 0) {
-			throw new Exception("Não é possível salvar pontos de interesse com coordenadas negativas");
+			throw new BusinessException("Não é possível salvar pontos de interesse com coordenadas negativas");
 		}
 
 		poiRepository.savePointInterest(pointInterest);

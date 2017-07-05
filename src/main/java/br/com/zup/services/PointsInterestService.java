@@ -3,6 +3,7 @@ package br.com.zup.services;
 import java.util.List;
 
 import br.com.zup.dto.PointsInterestDTO;
+import br.com.zup.exceptions.BusinessException;
 
 public interface PointsInterestService {
 
@@ -16,8 +17,9 @@ public interface PointsInterestService {
 	 * Salva um ponto de interesse
 	 * @param poi
 	 * @throws Exception
+	 * @throws BusinessException
 	 */
-	void saveInterestPoints(PointsInterestDTO poi) throws Exception;
+	void saveInterestPoints(PointsInterestDTO poi) throws BusinessException;
 
 	/**
 	 * Pesquisa todos os pontos de interesse em uma distância
