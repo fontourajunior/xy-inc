@@ -48,7 +48,7 @@ public class PoiController {
 	 * @throws BusinessException
 	 */
 	@PostMapping()
-	public ResponseEntity saveInterestPoints(@Valid @RequestBody PointsInterestDTO poi) throws Exception, BusinessException {
+	public ResponseEntity saveInterestPoints(@Valid @RequestBody PointsInterestDTO poi) throws BusinessException {
 		LOGGER.info("Salvando pontos de interesse na base de dados.");
 		poiService.saveInterestPoints(poi);
 		return new ResponseEntity<>(HttpStatus.CREATED);
