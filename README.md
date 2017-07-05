@@ -99,7 +99,7 @@ $ curl -H "Content-Type: application/json" -X POST -d '{"coordinatedX": 0, "coor
 
 Foi disponibilizada uma documentação dos serviços. Esta documentação é acessível na URL http://localhost:8080/swagger-ui.html
 
-![Swagger](https://github.com/fontourajunior/xy-inc/readme_img/doc.png)
+![Swagger](https://github.com/fontourajunior/xy-inc/blob/master/readme_img/doc.png)
 
 É possível acessar o banco embarcado pela a URL: http://localhost:8080/h2-console/
 
